@@ -56,7 +56,7 @@ def find_a_file(stream = None, options = None):
                     return 0
 
             elif stream is not None:
-                with open('example.txt', 'w') as f:
+                with open('request.txt', 'w') as f:
 
                    f.write(search[0])
 

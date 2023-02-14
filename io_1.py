@@ -1,3 +1,4 @@
+#!/Library/Frameworks/Python.framework/Versions/3.10/bin/ python3
 # Name: Tristan Pereira
 # Github UN: tristanp299
 # Date: 02/13/2023
@@ -12,7 +13,7 @@ def main():
 
     while(True):
 
-        with open(r'example.txt', 'r') as f:
+        with open(r'request.txt', 'r') as f:
             data = f.readline()
 
         if data:
