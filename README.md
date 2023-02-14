@@ -26,4 +26,4 @@ Looking at...../Users/Shared/MacOs/.....
 Your file: /Users/tristanpereira/Library/Application Support/Steam/music/_database/musicdatabase_0016.db
 ```
 
-![alt text](https://online.visual-paradigm.com/app/diagrams/)
+[![UML_diagram.jpeg](https://github.com/tristanp299/FindAFile_Milestone1/blob/main/UML_diagram.jpeg)]
