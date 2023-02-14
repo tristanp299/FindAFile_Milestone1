@@ -1,4 +1,4 @@
-#!/Library/Frameworks/Python.framework/Versions/3.10/bin/ python3
+#!/usr/bin/env python3
 # Name: Tristan Pereira
 # Github UN: tristanp299
 # Date: 02/13/2023
@@ -18,6 +18,7 @@ def main():
 
         if data:
             find_a_file(data)
+            return 0
 
         time.sleep(1)
 
