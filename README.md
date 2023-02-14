@@ -25,3 +25,5 @@ Looking at...../Users/Shared/MacOs/.....
 ```
 Your file: /Users/tristanpereira/Library/Application Support/Steam/music/_database/musicdatabase_0016.db
 ```
+
+![alt text](https://online.visual-paradigm.com/app/diagrams/)
