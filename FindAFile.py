@@ -4,12 +4,17 @@
 # Description:
 import os
 
-def find_a_file(options = None):
+def find_a_file(stream = None, options = None):
+
     print('*********** Find-A-File ************')
     print('This program can locate a file, folder, or application.\nPlease type in any words or letters you think is '
           'in the name!\nPress \'Ctrl-c\' to go back.')
     try:
-        keyword = input('>:')
+        if stream is None:
+            keyword = input('>:')
+
+        else:
+            keyword = stream
 
         search = []
         found = False
@@ -24,10 +29,6 @@ def find_a_file(options = None):
                     break
 
 
-           # for name in dirs:
-            #    if keyword in name:
-           #         search.append(os.path.join(root,name))
-           #         break
 
         if not search:
             print('Sorry this file cannot be found. Would you like to try again?')
@@ -39,19 +40,32 @@ def find_a_file(options = None):
         else:
             print('\n******************************')
             print('\nHere are your results!')
-            for i in search:
-                print(i)
 
-            print('Would you like to go again?')
-            reponse = input('(y/n):')
 
-            if reponse == 'y':
-                find_a_file()
-            elif reponse == 'n':
-                return 0
+            if stream is None:
+
+                for i in search:
+                    print(i)
+
+                print('Would you like to go again?')
+                reponse = input('(y/n):')
+
+                if reponse == 'y':
+                    find_a_file()
+                elif reponse == 'n':
+                    return 0
+
+            elif stream is not None:
+                with open('example.txt', 'w') as f:
+
+                   f.write(search[0])
+
 
     except KeyboardInterrupt as err:
         main()
+
+    finally:
+        return 0
 
 def options():
 
@@ -69,10 +83,14 @@ def options():
         return [first_match, find_all, find_multiple]
 
     elif response == '4':
-        return None
+        main()
 
 
-def main():
+def main(stream = None):
+
+    if stream is not None:
+        find_a_file(stream)
+
     print('Welcome to Find-A-File!')
     print('Here you can locate any file on your system! Please enter an option:')
 
@@ -99,6 +117,5 @@ def main():
         else:
             return 0
 
-if __name__ == '__main__':
-    main()
+
 
